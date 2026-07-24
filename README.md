@@ -1,1 +1,0 @@
-# R---Social-Exchange-model
