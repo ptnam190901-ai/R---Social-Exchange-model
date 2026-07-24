@@ -21,8 +21,11 @@ Overall MSA =  0.82
 0.76 0.87 0.74  0.80  0.81  0.85  0.90  0.69  0.80  0.71  0.88 0.83 0.80  0.77  0.71 0.78  0.85  0.84  0.86  0.79  0.85 0.83  0.95 0.84  0.81  0.83  0.92 0.85 0.93
 ```
 The value of KMO test is over 0.5, so the data is sufficient.
+
 Running dev(cov(dat)), which calculates the determinant test, collects the result: 6.433468e-23. The number is too small, so it is not likely to cause multicollinearity.
+
 Because of the assumption of the dependence between factors, the oblique rotation is used for EFA, so the function used in the EFA is fit.efa <- efa(dat, nfactors = 5, rotation = ‘oblimin’) (oblimin is used because of its precision).
+
 Running summary(fit.efa, fit.measures = TRUE), collect the standardized loadings: (* = significant at 1% level)
 ```text
         f1      	f2      	f3      	f4	     f5      	
