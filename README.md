@@ -4,7 +4,9 @@
 
 ## The problem: 
 The company want to clarify how quality of interactions, specifically leader-member exchange (LMX) and team-member exchange (TMX), affects employee self-efficacy (EFF) and job satisfaction (SAT), thereby ultimately lead to better quality management (TQM).
+
 **EFA, CFA:** used to discover factors for the quality management and relationships between factors and variables in the survey questions, and to test the model consistency with the data
+
 **SEM:** forming qualitative models, thereby validating the model to interpolate the relationship between factors and their effects on quality management
 
 ## EFA
@@ -14,14 +16,15 @@ Firstly, create a scree plot of the data by the function scree(dat), collecting 
 Based on the plot, there are five factors whose eigenvalues are over 1, so it can be said that in this case, the appropriate number of factors is 5.
 Running KMO(dat), collecting the KMO test result:
 Overall MSA =  0.82
+```text
  q1     q2     q3   q4   q5     q6   q7     q8     q9  q10  q11  q12  q13  q14  q15  q16  q17   q18  q19  q20  q21  q22   r1     r2    r3    r4    r5   r6   r7 
 0.76   0.87   0.74 0.80 0.81   0.85 0.90   0.69   0.80 0.71 0.88 0.83 0.80 0.77 0.71 0.78 0.85 0.84 0.86 0.79 0.85 0.83   0.95 0.84   0.81 0.83   0.92 0.85 0.93
- 
+```
 The value of KMO test is over 0.5, so the data is sufficient.
 Running dev(cov(dat)), which calculates the determinant test, collects the result: 6.433468e-23. The number is too small, so it is not likely to cause multicollinearity.
 Because of the assumption of the dependence between factors, the oblique rotation is used for EFA, so the function used in the EFA is fit.efa <- efa(dat, nfactors = 5, rotation = ‘oblimin’) (oblimin is used because of its precision).
 Running summary(fit.efa, fit.measures = TRUE), collect the standardized loadings: (* = significant at 1% level)
-f1      	f2      	f3      	f4	f5      	
+        f1      	f2      	f3      	f4	     f5      	
 q1   	0.863*              
 q2   	0.924*                                           
 q3   	0.951*                                           
@@ -33,23 +36,23 @@ q8           		0.932*
 q9           		0.938*                                   
 q10          		0.687*              .       .            
 q11          		0.841*                                   
-q12         		0.909*                      .            
+q12         		 0.909*                      .            
 q13              .   		0.756*                           
 q14                  		0.943*                           
 q15                  		0.910*                           
 q16                  		0.919*                           
-q17                 		0.930*              .            
+q17                 		 0.930*              .            
 q18                          			0.846*      .            
 q19                      .   			0.838*      .            
 q20                          			0.932*                   
-q21                         			0.978*                   
+q21                         			 0.978*                   
 q22                          			0.873*                   
 r1                                   				0.936*           
 r2                                   				0.949*          
-r3                                  				0.960*          
+r3                                  				 0.960*          
 r4                                   				0.959*           
 r5                                   				0.926*           
-r6                                  				0.980*          
+r6                                  				 0.980*          
 r7                                   				0.938*           
 With values over 0.6, it can be safe to say that these values show the association between the factors and variables, specifically:
 - f1 is associated with variables q1 -> q6: LMX
@@ -57,6 +60,7 @@ With values over 0.6, it can be safe to say that these values show the associati
 - f3 is associated with variables q13 -> q17: EFF
 - f4 is associated with variables q18 -> q22: SAT
 - f5 is associated with variables r1 -> r7: TQM
+
 The EFA fosters the theoretical measurement structure of the social exchange model.
 2. (CFA) Based on the result of EFA and the assumed variable, establish the CFA model as follows:
 model.cfa <- '
