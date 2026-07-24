@@ -123,7 +123,9 @@ model.sem1 <- '
 ```
 
 Fit the model: fit.sem1 <- sem(model.sem1, dat)
+
 Assessing measures of construct reliability and convergent and discriminant validity, collecting the results below:
+
 compRelSEM(fit.sem1):
 ```text
  LMX     TMX    EFF    SAT     TQM
@@ -149,7 +151,9 @@ Running summary(fit.sem1, fit.measures = TRUE), collecting the indexes below:
 - TLI: 0.942
 - AIC: 2502.236
 - BIC: 2644.651
+
 The second model where LMX and TMX have direct effects on TQM, EFF and SAT, and EFF and SAT have a direct effect on TQM:
+
 ```text
 model.sem2 <- '
  LMX =~ q1 + q2 + q3 + q4 + q5 + q6
@@ -162,7 +166,9 @@ model.sem2 <- '
  TQM ~ LMX + TMX + EFF + SAT’
 ```
 Fit the model: fit.sem2 <- sem(model.sem2, dat)
+
 Assessing measures of construct reliability and convergent and discriminant validity, collecting the results below:
+
 compRelSEM(fit.sem2): 
 ```text
  LMX    TMX    EFF    SAT    TQM
@@ -194,7 +200,8 @@ All the measures regarding CFI, TLI, comprelSEM, AVE and htmt from the two model
 AIC is Akaiki Information Criterion, BIC is Bayesian Information Criterion. These numbers measure the likelihood of the data with the given model, and the pair of models with lower indexes would be preferred. From the above results, we can see that the AIC and BIC of model 2 are lower than those of model 1, so model 2 is the better model.
 
 ## 4. Net effect of TMX
-2. Using Model 2, to consider the net effect of TMX, creating a model that validates the mediated effect:
+
+Using Model 2, to consider the net effect of TMX, creating a model that validates the mediated effect:
 ```text
 model.net <- '
  LMX =~ q1 + q2 + q3 + q4 + q5 + q6
@@ -209,12 +216,17 @@ model.net <- '
  b_net := b_ind + b3'
 ```
 b_ind is to calculate the indirect effect, while the b_net is to calculate the total net effect of TMX
+
 Fit the model: fit.net <- sem(model.net, dat)
+
 After running summary(fit.net, fit.measures = TRUE), collect the results below: 
 - CFI: 0.948
 - TLI: 0.942
+
 -> The model ensures the quality of fit.
+
 Defined Parameters:
+
 ```text
              Estimate  	Std.Err  	z-value	  P(>|z|)
     b_ind      0.591    	0.215    	2.755	    0.006
@@ -222,9 +234,13 @@ Defined Parameters:
 ```
 
 The CFI and TLI are over 0.9, so the model is qualitatively fit. Based on the results, it is noticeable that the indirect effect of TMX on TQM, which EFF and SAT mediated, is statistically positive (β = 0.591, p = 0.006 < 0.05, so the null hypothesis of b_ind being zero can be rejected). Also, the total net effect of TMX on TQM is considerable (β = 0.604, p = 0.006 < 0.05, so the null hypothesis of b_net being zero can be rejected). These points out that the team-member exchange affects the quality management directly and by driving the employees’ self-efficacy and job satisfaction.
-(3) Managerial implications:
+
+# Managerial implications
+
 - The EFA and CFA prove the assumption that the quality management strongly follows the social exchange model, which is robustly driven by relationships and interactions in workplaces.
+  
 - The model 2 being better confirms that self-efficacy and job satisfaction mediate the relationship between quality of interaction and total quality management, which means that the feeling of confidence and contentment plays an important role for employees to contribute to the quality improvement.
+ 
 - The mediated model of TMX indicates that stronger teamwork relationships strongly enhance the total quality management both directly and indirectly, emphasizing the essence of colleagues' support and collaboration.
   
 **=> From the managers’ perspective, it is essential not to overlook the latent effect of employees’ experience with interactions with leadership and teammates on the quality management. The company should encourage leadership training and especially team cooperation, thereby enhancing the work psychology of employees, ultimately driving direct and indirect improvement of the business quality.**
