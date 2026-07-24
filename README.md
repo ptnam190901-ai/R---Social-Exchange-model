@@ -83,7 +83,9 @@ Running the summary(model.cfa, fit.measures = TRUE), collects some important mea
 - RMSEA: 0.084
 
 RMSEA is the root mean squared error of approximation. It is considered smaller than 0.05 to indicate better match between the model and data, but in this case it reaches 0.084. However, the CFI and TLI are relatively high. CFI is Comparative Fit Index and Tucker-Lewis Index. If they are over 0.9, it means the model is better and ensures parsimony. Therefore, the model ensures quality of fit.
+
 Running some functions for measures of construct reliability and convergent and discriminant validity:
+
 comprelSEM(fit.cfa):
 ```text
  LMX    TMX    EFF    SAT    TQM 
@@ -104,7 +106,6 @@ EFF 	0.271 	0.679 	1.000
 SAT 	0.371 	0.310 	0.181 	1.000      
 TQM 	0.394 	0.379 	0.375 	0.682 	1.000
 ```
-
 The comprelSEM measures the reliability of the model, which is better with higher values, at least over 0.7. The AVE measures convergent validity, which is better with values higher than 0.5. The HTMT measures the discriminant validity, which is better with values lower than 0.9. Based on the results above, it can be safe to say that the measurement models via CFA are in acceptable ranges regarding construct reliability and convergent and discriminant validity, and do not need any more appropriate actions.
 
 ## 3. SEM
