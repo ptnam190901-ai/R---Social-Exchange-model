@@ -77,6 +77,7 @@ model.cfa <- '
  TQM =~ r1 + r2 + r3 + r4 + r5 + r6 + r7’
 ```
 Fit the model: fit.cfa <- cfa(model.cfa, dat)
+
 Running the summary(model.cfa, fit.measures = TRUE), collects some important measures:
 - CFI: 0.948
 - TLI: 0.942
