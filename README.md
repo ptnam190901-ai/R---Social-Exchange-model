@@ -17,8 +17,8 @@ Based on the plot, there are five factors whose eigenvalues are over 1, so it ca
 Running KMO(dat), collecting the KMO test result:
 Overall MSA =  0.82
 ```text
- q1     q2     q3   q4   q5     q6   q7     q8     q9  q10  q11  q12  q13  q14  q15  q16  q17   q18  q19  q20  q21  q22   r1     r2    r3    r4    r5   r6   r7 
-0.76   0.87   0.74 0.80 0.81   0.85 0.90   0.69   0.80 0.71 0.88 0.83 0.80 0.77 0.71 0.78 0.85 0.84 0.86 0.79 0.85 0.83   0.95 0.84   0.81 0.83   0.92 0.85 0.93
+ q1   q2   q3    q4    q5    q6    q7    q8    q9   q10    q11  q12   q13  q14   q15  q16   q17   q18   q19   q20   q21  q22    r1   r2   r3     r4   r5   r6   r7 
+0.76 0.87 0.74  0.80  0.81  0.85  0.90  0.69  0.80  0.71  0.88 0.83 0.80  0.77  0.71 0.78  0.85  0.84  0.86  0.79  0.85 0.83  0.95 0.84  0.81  0.83  0.92 0.85 0.93
 ```
 The value of KMO test is over 0.5, so the data is sufficient.
 Running dev(cov(dat)), which calculates the determinant test, collects the result: 6.433468e-23. The number is too small, so it is not likely to cause multicollinearity.
