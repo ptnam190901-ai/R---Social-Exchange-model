@@ -2,7 +2,7 @@
 
 # Case: Human resources and quality management
 
-## The problem: 
+## The problem 
 The company want to clarify how quality of interactions, specifically leader-member exchange (LMX) and team-member exchange (TMX), affects employee self-efficacy (EFF) and job satisfaction (SAT), thereby ultimately lead to better quality management (TQM).
 
 **EFA, CFA:** used to discover factors for the quality management and relationships between factors and variables in the survey questions, and to test the model consistency with the data
