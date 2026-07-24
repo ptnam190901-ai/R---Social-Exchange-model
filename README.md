@@ -81,6 +81,7 @@ Running the summary(model.cfa, fit.measures = TRUE), collects some important mea
 - CFI: 0.948
 - TLI: 0.942
 - RMSEA: 0.084
+
 RMSEA is the root mean squared error of approximation. It is considered smaller than 0.05 to indicate better match between the model and data, but in this case it reaches 0.084. However, the CFI and TLI are relatively high. CFI is Comparative Fit Index and Tucker-Lewis Index. If they are over 0.9, it means the model is better and ensures parsimony. Therefore, the model ensures quality of fit.
 Running some functions for measures of construct reliability and convergent and discriminant validity:
 comprelSEM(fit.cfa):
